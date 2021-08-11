@@ -62,7 +62,7 @@ public class JwtManager {
         }
 
         Claims claims = null;
-        // 解析失败了会抛出异常，所以我们要捕捉一下。token过期、token非法都会导致解析失败
+        // 解析失败了会抛出异常，捕捉一下。token过期、token非法都会导致解析失败
         try {
             claims = Jwts.parser()
                     .setSigningKey(secretKey)
