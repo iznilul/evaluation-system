@@ -1,21 +1,36 @@
 package com.softlab.okr.service;
 
+import com.github.pagehelper.PageInfo;
 import com.softlab.okr.exception.ServiceException;
 import com.softlab.okr.model.bo.RoleResourceBo;
+import com.softlab.okr.model.dto.ResourceDTO;
 import com.softlab.okr.model.entity.Resource;
-
+import com.softlab.okr.model.vo.ResourceVO;
+import java.util.Collection;
 import java.util.List;
-
+import java.util.Set;
 
 public interface ResourceService {
 
-    void addResources(List<Resource> resourceList) throws ServiceException;
+  int saveResources(List<Resource> resourceList) throws ServiceException;
 
-    void addRoleResource(RoleResourceBo roleResourceBo) throws ServiceException;
+  int saveRoleResource(RoleResourceBo bo) throws ServiceException;
 
-    void removeByType(int type) throws ServiceException;
+  int removeList() throws ServiceException;
 
-    List<Integer> getResourceIds(String role) throws ServiceException;
+  Resource getResourceByPath(String path) throws ServiceException;
 
-    void reloadRoleResource(RoleResourceBo roleResourceBo) throws ServiceException;
+  Resource getResourceById(int resourceId) throws ServiceException;
+
+  List<Integer> getResourceIds(String role) throws ServiceException;
+
+  PageInfo<ResourceVO> getResourceList(ResourceDTO dto) throws ServiceException;
+
+  int reloadRoleResource(RoleResourceBo bo) throws ServiceException;
+
+  int modifyResourceStatus(int resourceId) throws ServiceException;
+
+  void appStartLoad(List<Resource> list) throws ServiceException;
+
+  Set<Resource> filterResource(Collection<Resource> list) throws ServiceException;
 }

@@ -1,6 +1,6 @@
 package com.softlab.okr.exception;
 
-import com.softlab.okr.utils.ResultCode;
+import com.softlab.okr.model.enums.BaseCode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ControllerException extends RuntimeException {
-    private ResultCode resultCode;
+public class ApiException extends RuntimeException {
+
+    private BaseCode baseCode;
 }

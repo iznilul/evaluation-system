@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "93c482c1-e85f-40f1-9cf5-39d3c57d8bbf",
+		"name": "evaluation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"admin\",\n\t\"password\":\"admin\"\n}"
+				},
+				"url": {
+					"raw": "localhost:9101/api/common/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9101",
+					"path": [
+						"api",
+						"common",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYzMDMwMDAxNiwiZXhwIjoxNjMxNTk2MDE2fQ.Gnb89HDs4IH6LlC2G4WcaluEHQWAub5bD5z_nptY3Q2d8zfnjMyjSUUOl6xinA58xwOuvs8-mgsLh6l3QIKvAA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9101/api/common/test",
+					"host": [
+						"localhost"
+					],
+					"port": "9101",
+					"path": [
+						"api",
+						"common",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYzMDMwMDAxNiwiZXhwIjoxNjMxNTk2MDE2fQ.Gnb89HDs4IH6LlC2G4WcaluEHQWAub5bD5z_nptY3Q2d8zfnjMyjSUUOl6xinA58xwOuvs8-mgsLh6l3QIKvAA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9101/api/common/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "9101",
+					"path": [
+						"api",
+						"common",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reloadAdminRoleResource",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyOTQ0NzE5NCwiZXhwIjoxNjI5NTMzNTk0fQ.H1YpG7yl1ijUZw-uInhGBxEI9EsFNbEequNnUIHNkmHELxUanPOz11IepBDzTSavBletfz2JRjOvT_ZGsrAJYQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9101/api/admin/reloadAdminRoleResource",
+					"host": [
+						"localhost"
+					],
+					"port": "9101",
+					"path": [
+						"api",
+						"admin",
+						"reloadAdminRoleResource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reloadUserRoleResource",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyOTQ0NzE5NCwiZXhwIjoxNjI5NTMzNTk0fQ.H1YpG7yl1ijUZw-uInhGBxEI9EsFNbEequNnUIHNkmHELxUanPOz11IepBDzTSavBletfz2JRjOvT_ZGsrAJYQ"
+					}
+				],
+				"url": {
+					"raw": "localhost:9101/api/admin/reloadUserRoleResource",
+					"host": [
+						"localhost"
+					],
+					"port": "9101",
+					"path": [
+						"api",
+						"admin",
+						"reloadUserRoleResource"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifyResourceStatus",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYyOTk0NDM3MiwiZXhwIjoxNjMwMTE3MTcyfQ.cTiRiEMU1k05IND_uwqgEK3PLhuXKehsXh8HBJgInjKXr7CSytpWlSWfruVT8HJ9u9hh-OPJW0SAjqKBosf-LA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9101/api/admin/modifyResourceStatus?resourceId=2006",
+					"host": [
+						"localhost"
+					],
+					"port": "9101",
+					"path": [
+						"api",
+						"admin",
+						"modifyResourceStatus"
+					],
+					"query": [
+						{
+							"key": "resourceId",
+							"value": "2006"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getResourceByCond",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYzMDk0MTg4MywiZXhwIjoxNjMyMjM3ODgzfQ.ZdJ-FOjM_hdLkb97lmkbFYJkmHKzi4MIFhizdBxXOEA4ZWh-B0Or8Hosi6YIddnBTmy4qvwYZ_tEgSsGd4Mfzg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"index\":1,\n\t\"pageSize\":20\n}"
+				},
+				"url": {
+					"raw": "localhost:9101/api/admin/getResourceByCond",
+					"host": [
+						"localhost"
+					],
+					"port": "9101",
+					"path": [
+						"api",
+						"admin",
+						"getResourceByCond"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLoginLogByCond",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTYzMDMyMjg1MywiZXhwIjoxNjMxNjE4ODUzfQ.VLUCl_Kz6k26jyvLo6qMNDyqF1Mbdrf9uV1VuhTRurk51Cpb8cHQans4WIvI7u2nac3kJLE1fAyyzhkrEslzFQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"\",\r\n    \"beginTime\":\"\",\r\n    \"endTime\":\"\",\r\n    \"index\":\"\",\r\n    \"pageSize\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9101/api/admin/getLoginLogByCond",
+					"host": [
+						"localhost"
+					],
+					"port": "9101",
+					"path": [
+						"api",
+						"admin",
+						"getLoginLogByCond"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
